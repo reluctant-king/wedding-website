@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="format-detection" content="telephone=no">
-<title>The Sacred Garden</title>
+<title id="site-title">My Wedding</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://mandapam-template.syncandstyle.com">
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{--cream:#F8EFE0;--gold:#A8843A;--goldl:#C9AE72;--ink:#6B5640;--wine:#7A1730;--serif:'Cormorant Garamond',Georgia,serif;--caps:'Cinzel',Georgia,serif}
@@ -113,47 +116,32 @@ img,video{display:block;max-width:100%}
 .ev .vn i{display:block;font-size:15px;color:var(--goldl)}
 .ev a{display:inline-block;margin-top:10px;font-family:var(--caps);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--goldl);padding-bottom:2px}
 
-/* dress code */
-.dc{padding:70px 0 30px;text-align:center}
-.dc .h2{font-family:var(--serif);font-weight:500;font-size:38px;text-transform:none;letter-spacing:.03em;margin:6px 0}
-.trk{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin-top:24px}
-.trk::-webkit-scrollbar{display:none}
-.sl{flex:0 0 100%;scroll-snap-align:center;padding:0 22px}
-.sl h4{font-family:var(--caps);font-weight:600;font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
-.sl img{width:100%;aspect-ratio:1/1;object-fit:contain;margin-bottom:14px}
-.sl p{font-size:17px}
-.sl p small{font-family:var(--caps);font-size:9px;letter-spacing:.2em;color:var(--goldl);margin-right:6px}
-.sw{display:flex;gap:10px;justify-content:center;margin:14px 0 6px}
-.sw i{width:18px;height:18px;border-radius:50%;border:1px solid rgba(0,0,0,.08)}
-.dots{display:flex;gap:7px;justify-content:center;margin-top:12px}
-.dots i{width:5px;height:5px;border-radius:50%;background:var(--goldl);opacity:.45;transition:.3s}
-.dots i.on{background:var(--gold);opacity:1;transform:scale(1.4)}
-.dc .sm{font-family:var(--caps);font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--goldl);margin-top:8px}
-
 /* rsvp */
-.rsvp{padding:90px 22px 60px;position:relative}
-.env{position:relative;margin:0 auto;max-width:340px;height:520px}
-.env .back{position:absolute;left:0;right:0;bottom:0;height:300px;background:linear-gradient(#5e1024,#7A1730);clip-path:polygon(0 0,50% 40%,100% 0,100% 100%,0 100%);opacity:0;transition:opacity .8s}
-.paper-c{position:absolute;left:0;right:0;top:0;padding:58px 24px 34px;text-align:center;background:#EFE7DA;border-radius:6px 6px 0 0;clip-path:polygon(0 0,100% 0,100% 88%,50% 100%,0 88%);box-shadow:0 12px 30px rgba(0,0,0,.12);transition:transform 1.4s cubic-bezier(.6,.05,.2,1);z-index:2;min-height:420px}
-.rsvp.sent .paper-c{transform:translateY(130px)}
-.rsvp.sent .back{opacity:1}
-.front{position:absolute;left:0;right:0;bottom:0;height:260px;z-index:3;background:linear-gradient(135deg,#8a1c38,#6a1229);clip-path:polygon(0 20%,50% 60%,100% 20%,100% 100%,0 100%);opacity:0;transition:opacity .6s 1s;pointer-events:none}
-.rsvp.sent .front{opacity:1}
-.sealw{position:absolute;top:-34px;left:50%;transform:translateX(-50%);width:68px;height:68px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#a02344,#6a1229 70%);box-shadow:0 6px 12px rgba(0,0,0,.3);z-index:4;display:flex;align-items:center;justify-content:center;color:#e8b8c0;font-family:var(--serif);font-size:22px}
-.paper-c .h2{font-family:var(--serif);font-size:46px;letter-spacing:.08em;margin:6px 0 0}
-.paper-c .sub{font-size:16px;margin:8px 0 22px;color:var(--goldl)}
-.paper-c label{display:block;text-align:left;font-family:var(--caps);font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--goldl)}
-.paper-c input[type=text]{width:100%;border:0;border-bottom:1px solid var(--goldl);background:transparent;font:inherit;font-size:18px;padding:6px 0;color:var(--ink);outline:0;margin-bottom:18px}
-.paper-c input::placeholder{color:#c8b896}
-.ch{display:flex;gap:8px;justify-content:center;margin-bottom:16px}
+.rsvp{padding:66px 22px 70px}
+.rsvp-card{position:relative;max-width:390px;margin:0 auto;padding:30px 26px 32px;text-align:center;background:linear-gradient(155deg,#fffaf0,#f1e6d4);border:1px solid #d6bd89;border-radius:18px;box-shadow:0 16px 38px rgba(110,80,30,.13)}
+.rsvp-card:before{content:"";position:absolute;inset:9px;border:1px solid rgba(168,132,58,.28);border-radius:12px;pointer-events:none}
+.sealw{position:relative;width:48px;height:48px;margin:0 auto 12px;border:1px solid rgba(232,184,192,.65);border-radius:50%;background:radial-gradient(circle at 35% 30%,#a02344,#6a1229 70%);box-shadow:0 4px 10px rgba(0,0,0,.16);display:flex;align-items:center;justify-content:center;color:#f2d5d9;font-family:var(--serif);font-size:21px}
+.rsvp-card>.eyebrow{font-size:9px}
+.rsvp-card .h2{font-family:var(--serif);font-size:40px;letter-spacing:.08em;color:var(--wine);margin:2px 0}
+.rsvp-card>.orn{margin:8px auto}
+.rsvp-card .sub{font-size:16px;margin:8px 0 22px;color:#987b4b}
+.rsvp-card label{display:block;text-align:left;font-family:var(--caps);font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#987b4b}
+.rsvp-card input[type=text]{width:100%;border:0;border-bottom:1px solid var(--goldl);background:transparent;font:inherit;font-size:18px;padding:7px 0;color:var(--ink);outline:0;margin-bottom:18px}
+.rsvp-card input[type=text]:focus{border-color:var(--wine)}
+.rsvp-card input::placeholder{color:#c8b896}
+.ch{display:grid;grid-template-columns:1fr 1fr;gap:8px;justify-content:center;margin-bottom:16px}
 .cnt{display:none;margin-bottom:14px}
 .cnt.show{display:block}
-.st{display:flex;align-items:center;justify-content:center;gap:30px;font-size:22px;margin-top:4px}
+.st{display:flex;align-items:center;justify-content:center;gap:22px;font-size:22px;margin-top:4px}
 .st button{width:28px;height:28px;border-radius:50%;border:1px solid var(--goldl);background:none;color:var(--gold);font-size:18px;cursor:pointer}
-.thx{position:absolute;left:0;right:0;top:60px;text-align:center;opacity:0;transition:opacity 1s 1.2s;pointer-events:none}
-.rsvp.sent .thx{opacity:1}
-.thx p{font-size:20px;font-style:italic;color:var(--gold)}
-.rsvp.sent .paper-c>*:not(.sealw){pointer-events:none}
+.ch .pill{justify-content:center;padding:8px 6px;font-size:9px;letter-spacing:.08em}
+.ch .pill.on{background:rgba(122,23,48,.09);border-color:var(--wine);color:var(--wine)}
+.rsvp-card>#send{background:var(--wine);border-color:var(--wine);color:#fffaf0;padding:10px 24px}
+.rsvp-card>#send:hover{background:#5e1024}
+.thx{display:none;padding:32px 4px 22px}
+.rsvp.sent .rsvp-fields{display:none}
+.rsvp.sent .thx{display:block}
+.thx p{font-size:21px;font-style:italic;color:var(--gold)}
 
 /* gallery */
 .gal{padding:60px 0 80px;text-align:center}
@@ -167,6 +155,33 @@ img,video{display:block;max-width:100%}
 .gseal img{position:absolute;inset:0;width:100%;height:100%}
 .gseal span{position:relative}
 footer{padding:30px 20px 60px;text-align:center;font-family:var(--caps);font-size:10px;letter-spacing:.3em;color:var(--goldl);text-transform:uppercase}
+.customize{padding:0 22px 24px;text-align:center}
+.customize summary{display:inline-block;list-style:none;border:1px solid var(--goldl);border-radius:24px;padding:8px 18px;font-family:var(--caps);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);cursor:pointer}
+.customize summary::-webkit-details-marker{display:none}
+.customize[open] summary{background:rgba(201,174,114,.15)}
+.custom-note{font-size:14px;font-style:italic;color:var(--goldl);margin:10px 0 18px}
+.editor{max-width:390px;margin:0 auto;padding:24px 20px;text-align:left;background:#fffaf0;border:1px solid #d6bd89;border-radius:14px;box-shadow:0 12px 30px rgba(110,80,30,.1)}
+.editor h2{font-family:var(--caps);font-weight:500;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:18px 0 10px}
+.editor h2:first-child{margin-top:0}
+.editor label{display:block;font-family:var(--caps);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#987b4b;margin:10px 0 4px}
+.editor input,.editor textarea{display:block;width:100%;border:1px solid #e3d3b1;border-radius:6px;background:#fffdf8;padding:9px 10px;font:16px var(--serif);color:var(--ink)}
+.editor input[type=file]{font:12px var(--serif);padding:7px}
+.editor textarea{min-height:70px;resize:vertical}
+.editor .fields{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+.editor .field{min-width:0}
+.editor .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.editor .pill{justify-content:center;letter-spacing:.1em}
+.editor .save{background:var(--wine);border-color:var(--wine);color:#fffaf0}
+.editor-status{min-height:24px;margin-top:12px;font-size:14px;color:var(--gold);text-align:center}
+.intro #intro-title,.intro #intro-message{white-space:pre-line}
+.family{padding:48px 22px 22px;text-align:center}
+.family-grid{display:grid;gap:14px;margin-top:24px}
+.family-card{padding:20px 18px;background:rgba(255,252,245,.62);border:1px solid #e6d6b5;border-radius:12px;box-shadow:0 8px 20px rgba(120,90,40,.06)}
+.family-card h3{font-family:var(--caps);font-size:14px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.family-card p{font-size:17px;white-space:pre-line}
+.family-card .parents{margin-bottom:6px}
+.family-card a{display:inline-block;margin-top:10px;color:var(--wine);font-size:16px;text-decoration:none}
+.card .at{font-size:15px;line-height:1.35;white-space:pre-line}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -175,30 +190,49 @@ footer{padding:30px 20px 60px;text-align:center;font-family:var(--caps);font-siz
 <!-- ====== WELCOME ENVELOPE ====== -->
 <div id="welcome"><div class="box" id="wbox">
   <img data-a="image/welcome-bg.webp" alt="Open your invitation">
-  <video data-a="video/welcome-bg.mp4" muted playsinline preload="auto"></video>
+  <video data-a="video/welcome-bg.mp4" muted playsinline preload="none"></video>
   <div class="tap">Tap to open</div>
 </div></div>
-<audio id="bgm" loop preload="none" src="https://pub-4dc8201144ca418fb604349c73e8c724.r2.dev/Einaudi_%20Divenire%20(1)%20(1).mp3"></audio>
-<button id="mus" aria-label="Pause music"><svg viewBox="0 0 14 14"><path id="mi" d="M3 1h3v12H3zM8 1h3v12H8z"/></svg></button>
+<button id="mus" aria-label="Pause music" title="Pause music"><svg viewBox="0 0 14 14"><path id="mi" d="M3 1h3v12H3zM8 1h3v12H8z"/></svg></button>
 
 <div class="wrap">
 
 <!-- ====== HERO ====== -->
 <section class="hero">
-  <video data-a="video/hero-bg.mp4" autoplay muted loop playsinline></video>
+  <video data-a="video/hero-bg.mp4" autoplay muted loop playsinline preload="none"></video>
   <img class="paper" data-a="image/paper.webp" alt="">
   <div class="txt">
-    <div class="eyebrow">The wedding of</div>
-    <h1>Siddharth</h1><div class="weds">weds</div><h1>Ananya</h1>
+    <div class="eyebrow" id="hero-eyebrow">My Wedding</div>
+    <h1 id="partner-one">Abhijith</h1><div class="weds">weds</div><h1 id="partner-two">Sanyuktha</h1>
   </div>
   <div class="scroll">Scroll down</div>
 </section>
 
 <!-- ====== INTRO ====== -->
 <section class="intro">
-  <h2 class="rv">Two Souls<br>One Destiny</h2>
-  <p class="sub rv">A bond blessed for seven lifetimes</p>
-  <p class="rv">Dear Friends and Family<br>Join us for an evening of love, laughter, blessings, and unforgettable memories as we begin our forever.</p>
+  <h2 class="rv" id="intro-title">With the blessings of our families</h2>
+  <p class="sub rv" id="intro-subtitle">Abhijith &amp; Sanyuktha</p>
+  <p class="rv" id="intro-message">To make this blessed occasion more joyful, we cordially invite you with your family.</p>
+</section>
+
+<!-- ====== OUR FAMILIES ====== -->
+<section class="family">
+  <div class="eyebrow rv">With the blessings of</div>
+  <h2 class="h2 rv">Our Families</h2>
+  <div class="orn rv"><i></i></div>
+  <div class="family-grid">
+    <article class="family-card rv">
+      <h3>Groom's Side</h3>
+      <p class="parents" id="groom-parents">S/o Mr. Ajayakumar &amp; Mrs. Sreeja</p>
+      <p id="groom-address">Kallinkalparambil Abhinivas, Neendoor (P.O), Kottayam</p>
+      <a id="groom-phone" href="tel:+919562276071">Phone: +91 9562 276 071</a>
+    </article>
+    <article class="family-card rv">
+      <h3>Bride's Side</h3>
+      <p class="parents" id="bride-parents">D/o Mr. Shaji &amp; Mrs. Saritha</p>
+      <p id="bride-address">Puthanthara (H), Kulasekharamangalam (P.O), Vaikom, Kottayam</p>
+    </article>
+  </div>
 </section>
 
 <!-- ====== SAVE THE DATE ====== -->
@@ -206,12 +240,13 @@ footer{padding:30px 20px 60px;text-align:center;font-family:var(--caps);font-siz
   <div class="eyebrow rv">Mark your calendar</div>
   <h2 class="h2 rv">Save the Date</h2>
   <div class="card" id="scratch">
-    <video data-a="video/scratch-card.mp4" muted playsinline preload="auto"></video>
+    <video data-a="video/scratch-card.mp4" muted playsinline preload="none"></video>
     <div class="hint"><b>»</b>Swipe to reveal</div>
     <div class="over">
-      <div class="dow">Tuesday</div>
-      <div class="dt">08 DEC 2026</div>
-      <div class="at">Four in the afternoon</div>
+      <div class="dow" id="wedding-day">Wednesday</div>
+      <div class="dt" id="wedding-date">23 DEC 2026</div>
+      <div class="at" id="wedding-time">Muhurtham: 10:30 AM to 11:00 AM
+Malayalam date: 1202 Dhanu 8</div>
       <a class="pill" id="ics" href="#" download="wedding.ics"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Add to calendar</a>
     </div>
   </div>
@@ -240,35 +275,23 @@ footer{padding:30px 20px 60px;text-align:center;font-family:var(--caps);font-siz
   <div class="orn rv"><i></i></div>
 </section>
 
-<!-- ====== DRESS CODE ====== -->
-<section class="dc">
-  <div class="eyebrow rv">What to wear</div>
-  <h2 class="h2 rv">Dress Code</h2>
-  <div class="orn rv"><i></i></div>
-  <div class="trk" id="trk"></div>
-  <div class="dots" id="dots"></div>
-  <div class="sm">Swipe to explore</div>
-</section>
-
 <!-- ====== RSVP ====== -->
 <section class="rsvp" id="rsvp">
-  <div class="env">
-    <div class="back"></div>
-    <div class="paper-c">
+  <div class="rsvp-card">
+    <div class="rsvp-fields">
       <div class="sealw">❀</div>
       <div class="eyebrow">Kindly reply</div>
       <h2 class="h2">RSVP</h2>
       <div class="orn"><i></i></div>
-      <p class="sub">Please let us know by<br>the date on your card<br><span style="color:var(--gold)">20 November 2026</span></p>
-      <label>Your name</label>
+      <p class="sub" id="rsvp-copy">We look forward to celebrating with you and your family.</p>
+      <label for="nm">Your name</label>
       <input type="text" id="nm" placeholder="Name" autocomplete="name">
-      <div class="ch"><button class="pill on" data-v="yes">Joyfully accept</button><button class="pill" data-v="no">Regretfully decline</button></div>
+      <div class="ch"><button type="button" class="pill on" data-v="yes" aria-pressed="true">Joyfully accept</button><button type="button" class="pill" data-v="no" aria-pressed="false">Regretfully decline</button></div>
       <div class="cnt show" id="cnt"><label style="text-align:center">Number of guests</label>
-        <div class="st"><button id="mn">−</button><span id="gn">1</span><button id="pl">+</button></div></div>
-      <button class="pill" id="send">Send reply</button>
+        <div class="st"><button type="button" id="mn" aria-label="Remove one guest">−</button><span id="gn">1</span><button type="button" id="pl" aria-label="Add one guest">+</button></div></div>
+      <button type="button" class="pill" id="send">Send reply</button>
     </div>
-    <div class="front"></div>
-    <div class="thx"><p>Thank you — your reply is noted.<br>We can't wait to celebrate with you.</p></div>
+    <div class="thx" aria-live="polite"><p>Thank you — your reply is noted.<br>We can't wait to celebrate with you.</p></div>
   </div>
 </section>
 
@@ -278,44 +301,189 @@ footer{padding:30px 20px 60px;text-align:center;font-family:var(--caps);font-siz
   <h2 class="h2 rv">Moments to treasure</h2>
   <p class="sub rv">Swipe left or right to turn the photo</p>
   <div class="gs" id="gs">
-    <div class="gseal"><img data-a="image/wax-seal.webp" alt=""><span>S A</span></div>
+    <div class="gseal"><img data-a="image/wax-seal.webp" alt=""><span id="seal-initials">S A</span></div>
   </div>
 </section>
-<footer>Siddharth &amp; Ananya · 08 · 12 · 2026</footer>
+<section class="customize">
+  <details>
+    <summary>Edit this invitation</summary>
+    <p class="custom-note">Changes and uploaded files are saved only in this browser on this device. Music limit: 20 MB; image limit: 12 MB.</p>
+    <form class="editor" id="editor">
+      <h2>Website</h2>
+      <label for="edit-site-title">Website title</label><input id="edit-site-title" name="siteTitle" required maxlength="80">
+      <h2>Couple &amp; wedding</h2>
+      <div class="fields">
+        <div class="field"><label for="edit-one">First name</label><input id="edit-one" name="one" required maxlength="40"></div>
+        <div class="field"><label for="edit-two">Second name</label><input id="edit-two" name="two" required maxlength="40"></div>
+        <div class="field"><label for="edit-date">Wedding date</label><input type="date" id="edit-date" name="date" required></div>
+        <div class="field"><label for="edit-time">Ceremony time</label><input type="time" id="edit-time" name="time" required></div>
+        <div class="field"><label for="edit-end-time">Muhurtham ends</label><input type="time" id="edit-end-time" name="ceremonyEnd" required></div>
+      </div>
+      <label for="edit-venue">Wedding venue</label><input id="edit-venue" name="venue" required maxlength="120">
+      <label for="edit-malayalam-date">Malayalam date</label><input id="edit-malayalam-date" name="malayalamDate" maxlength="80">
+      <h2>Reception</h2>
+      <label for="edit-reception-venue">Reception venue</label><input id="edit-reception-venue" name="receptionVenue" required maxlength="120">
+      <label for="edit-reception-time">Reception time</label><input id="edit-reception-time" name="receptionTime" required maxlength="80">
+      <h2>Family details</h2>
+      <label for="edit-groom-parents">Groom's family</label><input id="edit-groom-parents" name="groomParents" required maxlength="120">
+      <label for="edit-groom-address">Groom's address</label><textarea id="edit-groom-address" name="groomAddress" required maxlength="200"></textarea>
+      <label for="edit-groom-phone">Groom's phone</label><input id="edit-groom-phone" name="groomPhone" type="tel" required maxlength="30">
+      <label for="edit-bride-parents">Bride's family</label><input id="edit-bride-parents" name="brideParents" required maxlength="120">
+      <label for="edit-bride-address">Bride's address</label><textarea id="edit-bride-address" name="brideAddress" required maxlength="200"></textarea>
+      <h2>Welcome message</h2>
+      <label for="edit-title">Main heading</label><textarea id="edit-title" name="title" required maxlength="100"></textarea>
+      <label for="edit-subtitle">Short line</label><input id="edit-subtitle" name="subtitle" required maxlength="120">
+      <label for="edit-message">Invitation message</label><textarea id="edit-message" name="message" required maxlength="500"></textarea>
+      <h2>Music &amp; photos</h2>
+      <label for="edit-song">Custom background song</label><input type="file" id="edit-song" accept="audio/*">
+      <label for="edit-cover">Invitation cover image</label><input type="file" id="edit-cover" accept="image/*">
+      <label for="edit-photo-one">Gallery photo one</label><input type="file" id="edit-photo-one" accept="image/*">
+      <label for="edit-photo-two">Gallery photo two</label><input type="file" id="edit-photo-two" accept="image/*">
+      <div class="actions">
+        <button type="submit" class="pill save">Save changes</button>
+        <button type="button" class="pill" id="clear-song">Use built-in music</button>
+        <button type="button" class="pill" id="reset-custom">Reset all</button>
+      </div>
+      <p class="editor-status" id="editor-status" role="status" aria-live="polite"></p>
+    </form>
+  </details>
+</section>
+<footer id="footer-text">Abhijith &amp; Sayujya · 23 · 12 · 2026</footer>
 </div>
 
 <script>
 /* ---------- CONFIG: set BASE to '' once you host image/ and video/ folders yourself ---------- */
 const BASE='https://mandapam-template.syncandstyle.com/';
-const WEDDING=new Date('2026-12-08T16:00:00+05:30');
+const DEFAULT_SETTINGS={siteTitle:'My Wedding',one:'Abhijith',two:'Sayujya',date:'2026-12-23',time:'10:30',ceremonyEnd:'11:00',malayalamDate:'1202 Dhanu 8',venue:'Vaikom Mahadeva Temple, Vaikom',receptionVenue:'Rajamakkal Parish Hall,Neendoor',receptionTime:'6:00 PM to 10:30 PM',groomParents:'S/o Mr. Ajayakumar & Mrs. Sreeja',groomAddress:'Kallinkalparambil Abhinivas, Neendoor (P.O), Kottayam',groomPhone:'+91 9562 276 071',brideParents:'D/o Mr. Shaji & Mrs. Saritha',brideAddress:'Puthanthara (H), Kulasekharamangalam (P.O), Vaikom, Kottayam',title:'With the blessings of our families',subtitle:'Abhijith & Sayujya',message:'To make this blessed occasion more joyful, we cordially invite you with your family.'};
+const SETTINGS_KEY='my-wedding-settings';
+let settings={...DEFAULT_SETTINGS};
+let WEDDING=new Date(`${settings.date}T${settings.time}:00+05:30`);
 const EVENTS=[
- ['Mehendi Ceremony','mehendi','Saturday, 05 December 2026','4:00 PM onwards','The Garden Courtyard','Emerald Convention Centre, Kochi','Emerald Convention Centre, Kochi'],
- ['Haldi Ceremony','haldi','Sunday, 06 December 2026','10:00 AM onwards','The Lotus Lawn','Emerald Convention Centre, Kochi','Emerald Convention Centre, Kochi'],
- ['Sangeet Night','sangeet','Monday, 07 December 2026','7:00 PM onwards','The Grand Ballroom','Emerald Convention Centre, Kochi','Emerald Convention Centre, Kochi'],
- ['Wedding Ceremony','wedding','Tuesday, 08 December 2026','Muhurat: 10:30 AM','Sri Krishna Wedding Hall','Temple Road, Kochi','Sri Krishna Wedding Hall, Temple Road, Kochi'],
- ['Wedding Reception','reception','Wednesday, 09 December 2026','6:30 PM onwards','The Royal Pavilion','Emerald Convention Centre, Kochi','Emerald Convention Centre, Kochi']];
-/* dress-code images: change file names here to match your assets */
-const DRESS=[
- ['Mehendi','dresscode-mehendi.webp','Flowing greens — lehengas, sharara sets or light florals','Ivory kurta with a printed nehru jacket',['#9aa63a','#3f5a3a','#b9cf9a','#eef0e0']],
- ['Haldi','dresscode-haldi.webp','Sunny yellows and marigold — light, playful drapes','Yellow kurta with a printed jacket',['#f2c230','#e8a21c','#f7dc7a','#fff3c4']],
- ['Sangeet','dresscode-sangeet.webp','Jewel tones and sparkle — indo-western gowns, lehengas','Pastel or navy bandhgala, sherwani',['#6b4a8c','#c9a0dc','#2a3a6a','#e9d8f2']],
- ['Wedding Ceremony','dresscode-wedding.webp','Traditional silks — kasavu, pinks, reds','Sherwani, or mundu with kurta',['#c2185b','#b08a6a','#9fb0a8','#d9c7b6']],
- ['Reception','dresscode-reception.webp','Evening elegance — gowns, sarees, jewel tones','Tailored suit or bandhgala',['#1f2a5a','#7a1730','#d4af37','#f5ede0']]];
+ ['Wedding Ceremony','wedding','Wednesday, 23 December 2026','Muhurtham: 10:30 AM to 11:00 AM','Vaikom Mahadeva Temple','Vaikom','Vaikom Mahadeva Temple, Vaikom'],
+ ['Wedding Reception','reception','Wednesday, 23 December 2026','6:00 PM to 10:30 PM','Rajamakkal Parish Hall,Neendoor','','Rajamakkal Parish Hall,Neendoor']];
 const PHOTOS=['image/2.webp','image/1.webp'];
 
 const $=s=>document.querySelector(s),el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h)e.innerHTML=h;return e};
-document.querySelectorAll('[data-a]').forEach(n=>n.src=BASE+n.dataset.a);
+const lazyVideos=new IntersectionObserver(es=>es.forEach(e=>{
+  if(!e.isIntersecting)return;
+  const v=e.target;
+  v.src=BASE+v.dataset.a;
+  v.load();
+  if(v.autoplay)v.play().catch(()=>{});
+  lazyVideos.unobserve(v);
+}),{rootMargin:'250px 0px'});
+document.querySelectorAll('[data-a]').forEach(n=>{
+  if(n.tagName==='IMG'){
+    n.loading=n.closest('#welcome')?'eager':'lazy';
+    n.decoding='async';
+    if(n.closest('#welcome'))n.fetchPriority='high';
+    n.src=BASE+n.dataset.a;
+  }else if(!n.closest('#welcome'))lazyVideos.observe(n);
+});
+function loadImage(n,path){
+  n.loading='lazy';n.decoding='async';n.src=BASE+path;
+}
+function setEditorStatus(message){const status=$('#editor-status');if(status)status.textContent=message}
+function applySettings(next){
+  settings={...DEFAULT_SETTINGS,...next};
+  WEDDING=new Date(`${settings.date}T${settings.time}:00+05:30`);
+  document.title=settings.siteTitle;
+  $('#hero-eyebrow').textContent=settings.siteTitle;
+  const dateOptions={timeZone:'Asia/Kolkata'};
+  const date=new Date(WEDDING);
+  const dateParts=Object.fromEntries(new Intl.DateTimeFormat('en-US',{day:'2-digit',month:'short',year:'numeric',...dateOptions}).formatToParts(date).map(part=>[part.type,part.value]));
+  const longDate=date.toLocaleDateString('en-US',{weekday:'long',day:'numeric',month:'long',year:'numeric',...dateOptions});
+  const dateStamp=date.toLocaleDateString('en-GB',{day:'2-digit',month:'2-digit',year:'numeric',...dateOptions}).replace(/\//g,' · ');
+  $('#partner-one').textContent=settings.one;$('#partner-two').textContent=settings.two;
+  $('#seal-initials').textContent=`${settings.one.charAt(0)} ${settings.two.charAt(0)}`;
+  $('#intro-title').textContent=settings.title;$('#intro-subtitle').textContent=settings.subtitle;$('#intro-message').textContent=settings.message;
+  $('#groom-parents').textContent=settings.groomParents;$('#groom-address').textContent=settings.groomAddress;
+  $('#groom-phone').textContent=`Phone: ${settings.groomPhone}`;
+  $('#groom-phone').href=`tel:${settings.groomPhone.replace(/[^\d+]/g,'')}`;
+  $('#bride-parents').textContent=settings.brideParents;$('#bride-address').textContent=settings.brideAddress;
+  $('#wedding-day').textContent=date.toLocaleDateString('en-US',{weekday:'long',...dateOptions});
+  $('#wedding-date').textContent=`${dateParts.day} ${dateParts.month.toUpperCase()} ${dateParts.year}`;
+  const endDate=new Date(`${settings.date}T${settings.ceremonyEnd}:00+05:30`);
+  const timeOptions={hour:'numeric',minute:'2-digit',timeZone:'Asia/Kolkata'};
+  $('#wedding-time').textContent=`Muhurtham: ${date.toLocaleTimeString('en-US',timeOptions)} to ${endDate.toLocaleTimeString('en-US',timeOptions)}\nMalayalam date: ${settings.malayalamDate}`;
+  $('#footer-text').textContent=`${settings.one} & ${settings.two} · ${dateStamp}`;
+  const weddingEvent=$('.ev[data-event-index="0"]');
+  if(weddingEvent){
+    const dateNode=weddingEvent.querySelector('.date');
+    dateNode.textContent=longDate;
+    if(dateNode.refreshScratch)dateNode.refreshScratch();
+    weddingEvent.querySelector('.tm').textContent=`Muhurtham: ${date.toLocaleTimeString('en-US',timeOptions)} to ${endDate.toLocaleTimeString('en-US',timeOptions)}`;
+    weddingEvent.querySelector('.vn').textContent=settings.venue;
+    weddingEvent.querySelector('a').href='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(settings.venue);
+  }
+  const receptionEvent=$('.ev[data-event-index="1"]');
+  if(receptionEvent){
+    const dateNode=receptionEvent.querySelector('.date');
+    dateNode.textContent=longDate;
+    if(dateNode.refreshScratch)dateNode.refreshScratch();
+    receptionEvent.querySelector('.tm').textContent=settings.receptionTime;
+    receptionEvent.querySelector('.vn').textContent=settings.receptionVenue;
+    receptionEvent.querySelector('a').href='https://maps.app.goo.gl/4wsHiquAZJBshLPk9'+encodeURIComponent(settings.receptionVenue);
+  }
+  $('#ics').download=`${settings.one}-${settings.two}-wedding.ics`;
+}
 
 /* ---------- welcome ---------- */
-const bgm=$('#bgm'),mus=$('#mus'),w=$('#welcome'),wv=w.querySelector('video');
+const mus=$('#mus'),w=$('#welcome'),wv=w.querySelector('video');
 let opened=false;
+let audioContext=null,musicTimer=null,musicNodes=[],musicPlaying=false,customTrack=null,customTrackUrl='';
+const chords=[[261.63,329.63,392,493.88],[220,261.63,329.63,440],[174.61,220,261.63,392],[196,246.94,293.66,392]];
+function playChord(index){
+  if(!audioContext)return;
+  const now=audioContext.currentTime;
+  musicNodes.forEach(({osc,gain})=>{gain.gain.cancelScheduledValues(now);gain.gain.setTargetAtTime(0,now,.7);osc.stop(now+3)});
+  musicNodes=[];
+  chords[index%chords.length].forEach((frequency,i)=>{
+    const osc=audioContext.createOscillator(),gain=audioContext.createGain();
+    osc.type='sine';osc.frequency.value=frequency;
+    gain.gain.setValueAtTime(0,now);gain.gain.linearRampToValueAtTime(i===0?.012:.008,now+1.6);
+    osc.connect(gain);gain.connect(audioContext.destination);osc.start(now);
+    musicNodes.push({osc,gain});
+  });
+}
+function startMusic(){
+  if(customTrack){
+    customTrack.play().then(()=>{musicPlaying=true;updateMusicButton()}).catch(()=>setEditorStatus('The selected song could not be played. Try another audio file.'));
+    return;
+  }
+  const AudioContextClass=window.AudioContext||window.webkitAudioContext;
+  if(!AudioContextClass)return;
+  if(!audioContext)audioContext=new AudioContextClass();
+  audioContext.resume().catch(()=>setEditorStatus('Music could not start. Tap the music button to try again.'));
+  let chord=0;
+  playChord(chord++);
+  musicTimer=setInterval(()=>playChord(chord++),8000);
+  musicPlaying=true;updateMusicButton();
+}
+function stopMusic(){
+  if(musicTimer){clearInterval(musicTimer);musicTimer=null}
+  if(customTrack)customTrack.pause();
+  if(audioContext){
+    const now=audioContext.currentTime;
+    musicNodes.forEach(({osc,gain})=>{gain.gain.cancelScheduledValues(now);gain.gain.setTargetAtTime(0,now,.3);osc.stop(now+2)});
+    musicNodes=[];
+  }
+  musicPlaying=false;updateMusicButton();
+}
+function updateMusicButton(){
+  mus.classList.add('show');
+  mus.setAttribute('aria-label',musicPlaying?'Pause music':'Play music');
+  mus.title=musicPlaying?'Pause music':'Play music';
+  $('#mi').setAttribute('d',musicPlaying?'M3 1h3v12H3zM8 1h3v12H8z':'M3 1l9 6-9 6z');
+}
 w.querySelector('.box').addEventListener('click',()=>{
   if(opened)return;opened=true;w.classList.add('play');
-  bgm.volume=.6;bgm.play().then(()=>mus.classList.add('show')).catch(()=>mus.classList.add('show'));
+  startMusic();
+  wv.src=BASE+wv.dataset.a;wv.load();
   let done=false;const fin=()=>{if(done)return;done=true;w.classList.add('gone');document.body.classList.remove('lock');setTimeout(()=>w.remove(),1300)};
   wv.play().catch(fin);wv.onended=fin;setTimeout(fin,5500);
 });
-mus.onclick=()=>{bgm.paused?bgm.play():bgm.pause();$('#mi').setAttribute('d',bgm.paused?'M3 1l9 6-9 6z':'M3 1h3v12H3zM8 1h3v12H8z')};
+mus.onclick=()=>musicPlaying?stopMusic():startMusic();
 
 /* ---------- scroll reveal ---------- */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});
@@ -339,8 +507,8 @@ function auto(p){if(revealed)return;card.classList.add('drag');const t0=performa
   (function f(t){const k=Math.min(1,(t-t0)/d);setProg(p+(1-p)*k);if(k<1)requestAnimationFrame(f);else{sv.currentTime=dur;finish()}})(t0)}
 $('#revbtn').onclick=()=>auto(sv.currentTime/dur);
 $('#ics').onclick=function(){const z=x=>x.toISOString().replace(/[-:]|\.\d+/g,'');
-  const e=new Date(WEDDING.getTime()+4*3600e3);
-  this.href='data:text/calendar;charset=utf8,'+encodeURIComponent(`BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:Siddharth weds Ananya\nDTSTART:${z(WEDDING)}\nDTEND:${z(e)}\nLOCATION:Sri Krishna Wedding Hall, Temple Road, Kochi\nEND:VEVENT\nEND:VCALENDAR`)};
+  const e=new Date(`${settings.date}T${settings.ceremonyEnd}:00+05:30`);
+  this.href='data:text/calendar;charset=utf8,'+encodeURIComponent(`BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:${settings.one} weds ${settings.two}\nDTSTART:${z(WEDDING)}\nDTEND:${z(e)}\nLOCATION:${settings.venue}\nEND:VEVENT\nEND:VCALENDAR`)};
 
 /* ---------- countdown ---------- */
 const pad=n=>String(n).padStart(2,'0'),last={};
@@ -351,13 +519,14 @@ tick();setInterval(tick,1000);
 
 /* ---------- celebrations (+ scratch-to-reveal dates) ---------- */
 const cel=$('#cel');
-EVENTS.forEach(([n,img,date,time,v1,v2,q])=>{
+EVENTS.forEach(([n,img,date,time,v1,v2,q],i)=>{
   const e=el('div','ev rv');
+  e.dataset.eventIndex=i;
   e.innerHTML=`<img data-a="image/${img}.webp" alt="${n} illustration"><div class="t"><h3>${n}</h3><div class="line"></div>
-  <div class="date">${date}</div><div class="tm">— · —${time}</div><div class="lb">Venue</div>
+  <div class="date">${date}</div><div class="tm">${time}</div><div class="lb">Venue</div>
   <div class="vn">${v1}<i>${v2}</i></div>
   <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}">Get directions</a></div>`;
-  e.querySelector('img').src=BASE+'image/'+img+'.webp';
+  loadImage(e.querySelector('img'),'image/'+img+'.webp');
   cel.appendChild(e);scratchify(e.querySelector('.date'));
 });
 function scratchify(box){
@@ -366,7 +535,7 @@ function scratchify(box){
     const g=ctx.createLinearGradient(0,0,c.width,0);g.addColorStop(0,'#d9c28e');g.addColorStop(.5,'#ecdcb2');g.addColorStop(1,'#cfb57a');
     ctx.fillStyle=g;ctx.fillRect(0,0,c.width,c.height);ctx.fillStyle='#8a6d2f';ctx.font='10px Cinzel,serif';ctx.textBaseline='middle';
     ctx.fillText('SCRATCH TO REVEAL',8,c.height/2)};
-  requestAnimationFrame(fit);let down=false,gone=false;
+  requestAnimationFrame(fit);box.refreshScratch=()=>{if(c.isConnected)fit()};let down=false,gone=false;
   const sc=e=>{const r=c.getBoundingClientRect();ctx.globalCompositeOperation='destination-out';ctx.beginPath();ctx.arc(e.clientX-r.left,e.clientY-r.top,16,0,7);ctx.fill();check()};
   const check=()=>{if(gone)return;const d=ctx.getImageData(0,0,c.width,c.height).data;let a=0;for(let i=3;i<d.length;i+=16)if(d[i]<20)a++;
     if(a/(d.length/16)>.45){gone=true;c.style.opacity=0;setTimeout(()=>c.remove(),600)}};
@@ -374,18 +543,9 @@ function scratchify(box){
   c.addEventListener('pointermove',e=>down&&sc(e));c.addEventListener('pointerup',()=>down=false);
 }
 
-/* ---------- dress code ---------- */
-const trk=$('#trk'),dots=$('#dots');
-DRESS.forEach(([n,img,w,m,cols],i)=>{
-  const s=el('div','sl');
-  s.innerHTML=`<h4>${n}</h4><img src="${BASE}image/${img}" alt="${n} dress code" onerror="this.style.display='none'"><p><small>WOMEN</small>${w}</p><p><small>MEN</small>${m}</p><div class="sw">${cols.map(c=>`<i style="background:${c}"></i>`).join('')}</div>`;
-  trk.appendChild(s);dots.appendChild(el('i',i?'':'on'));
-});
-trk.addEventListener('scroll',()=>{const i=Math.round(trk.scrollLeft/trk.clientWidth);[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i))});
-
 /* ---------- RSVP ---------- */
 let going=true,guests=1;
-document.querySelectorAll('.ch .pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.ch .pill').forEach(x=>x.classList.remove('on'));b.classList.add('on');going=b.dataset.v==='yes';$('#cnt').classList.toggle('show',going)});
+document.querySelectorAll('.ch .pill').forEach(b=>b.onclick=()=>{document.querySelectorAll('.ch .pill').forEach(x=>{x.classList.remove('on');x.setAttribute('aria-pressed','false')});b.classList.add('on');b.setAttribute('aria-pressed','true');going=b.dataset.v==='yes';$('#cnt').classList.toggle('show',going)});
 $('#mn').onclick=()=>$('#gn').textContent=guests=Math.max(1,guests-1);
 $('#pl').onclick=()=>$('#gn').textContent=guests=Math.min(10,guests+1);
 $('#send').onclick=()=>{
@@ -396,13 +556,142 @@ $('#send').onclick=()=>{
 };
 
 /* ---------- gallery (swipe to turn) ---------- */
-const gs=$('#gs'),ph=PHOTOS.map((p,i)=>{const d=el('div','ph');d.innerHTML=`<img src="${BASE+p}" alt="">`;gs.insertBefore(d,gs.querySelector('.gseal'));return d});
+const gs=$('#gs'),ph=PHOTOS.map((p,i)=>{const d=el('div','ph'),img=el('img');img.alt='';loadImage(img,p);d.appendChild(img);gs.insertBefore(d,gs.querySelector('.gseal'));return d});
 let gi=0,gx=null;const pos=()=>ph.forEach((d,i)=>{const o=(i-gi+ph.length)%ph.length;d.style.zIndex=ph.length-o;d.style.transform=o?`translateY(${o*10}px) rotate(${o%2?3:-3}deg) scale(${1-o*.03})`:'none';d.style.opacity=o>2?0:1});
 pos();
 gs.addEventListener('pointerdown',e=>{gx=e.clientX;gs.setPointerCapture(e.pointerId)});
 gs.addEventListener('pointermove',e=>{if(gx===null)return;const dx=e.clientX-gx;ph[gi].style.transition='none';ph[gi].style.transform=`translateX(${dx}px) rotate(${dx/18}deg)`});
 gs.addEventListener('pointerup',e=>{if(gx===null)return;const dx=e.clientX-gx;gx=null;ph[gi].style.transition='';
   if(Math.abs(dx)>60){const o=ph[gi];o.style.transform=`translateX(${dx>0?130:-130}%) rotate(${dx/6}deg)`;o.style.opacity=0;gi=(gi+1)%ph.length;setTimeout(()=>{o.style.transition='none';pos();void o.offsetWidth;o.style.transition=''},600);pos()}else pos()});
+
+/* ---------- local invitation editor ---------- */
+const editor=$('#editor'),mediaKeys=['song','cover','photoOne','photoTwo'],mediaUrls={};
+let mediaDbPromise;
+function openMediaDb(){
+  if(!window.indexedDB)return Promise.reject(new Error('This browser does not support local media storage.'));
+  if(!mediaDbPromise)mediaDbPromise=new Promise((resolve,reject)=>{
+    const request=indexedDB.open('sacred-garden-customization',1);
+    request.onupgradeneeded=()=>request.result.createObjectStore('assets');
+    request.onsuccess=()=>resolve(request.result);
+    request.onerror=()=>reject(request.error||new Error('Could not open local media storage.'));
+  });
+  return mediaDbPromise;
+}
+function writeMedia(changes){
+  return openMediaDb().then(db=>new Promise((resolve,reject)=>{
+    const tx=db.transaction('assets','readwrite'),store=tx.objectStore('assets');
+    Object.entries(changes).forEach(([key,value])=>value?store.put(value,key):store.delete(key));
+    tx.oncomplete=resolve;
+    tx.onerror=()=>reject(tx.error||new Error('Could not save uploaded media.'));
+    tx.onabort=()=>reject(tx.error||new Error('Saving uploaded media was cancelled.'));
+  }));
+}
+function readMedia(){
+  return openMediaDb().then(db=>new Promise((resolve,reject)=>{
+    const tx=db.transaction('assets','readonly'),store=tx.objectStore('assets'),result={};
+    let remaining=mediaKeys.length;
+    mediaKeys.forEach(key=>{
+      const request=store.get(key);
+      request.onsuccess=()=>{result[key]=request.result;if(--remaining===0)resolve(result)};
+      request.onerror=()=>reject(request.error||new Error('Could not load saved media.'));
+    });
+    tx.onerror=()=>reject(tx.error||new Error('Could not load saved media.'));
+  }));
+}
+function applyMediaAsset(key,blob){
+  const targets={
+    photoOne:[ph[0].querySelector('img')],
+    photoTwo:[ph[1].querySelector('img')]
+  };
+  const fallback={cover:'image/welcome-bg.webp',photoOne:PHOTOS[0],photoTwo:PHOTOS[1]};
+  if(key==='song'){
+    const wasPlaying=musicPlaying;
+    if(wasPlaying)stopMusic();
+    if(customTrackUrl)URL.revokeObjectURL(customTrackUrl);
+    customTrackUrl='';customTrack=null;
+    if(blob){customTrackUrl=URL.createObjectURL(blob);customTrack=new Audio(customTrackUrl);customTrack.loop=true;customTrack.preload='none';customTrack.volume=.6}
+    if(wasPlaying)startMusic();
+    return;
+  }
+  if(mediaUrls[key])URL.revokeObjectURL(mediaUrls[key]);
+  if(key==='cover'){
+    const cover=blob?(mediaUrls[key]=URL.createObjectURL(blob)):BASE+fallback.cover;
+    $('#welcome img').src=cover;
+    $('.hero .paper').src=blob?cover:BASE+'image/paper.webp';
+    return;
+  }
+  const source=blob?(mediaUrls[key]=URL.createObjectURL(blob)):BASE+fallback[key];
+  targets[key].forEach(image=>image.src=source);
+}
+function fillEditor(next){
+  Object.keys(next).forEach(key=>{if(editor.elements[key])editor.elements[key].value=next[key]});
+}
+function readEditor(){
+  const values=new FormData(editor),next={};
+  ['siteTitle','one','two','date','time','ceremonyEnd','malayalamDate','venue','receptionVenue','receptionTime','groomParents','groomAddress','groomPhone','brideParents','brideAddress','title','subtitle','message'].forEach(key=>next[key]=String(values.get(key)||'').trim());
+  return next;
+}
+function validUpload(file,type){
+  if(!file)return true;
+  const extension=type==='audio'?/\.(mp3|wav|ogg|m4a|aac|flac)$/i:/\.(png|jpe?g|gif|webp|avif|svg)$/i;
+  if(!(file.type.startsWith(type+'/')||extension.test(file.name))){setEditorStatus(`Choose a valid ${type} file.`);return false}
+  const maxSize=type==='audio'?20:12;
+  if(file.size>maxSize*1024*1024){setEditorStatus(`Keep ${type} files under ${maxSize} MB.`);return false}
+  return true;
+}
+function applyStoredMedia(assets){mediaKeys.forEach(key=>{if(assets[key])applyMediaAsset(key,assets[key])})}
+function restoreEditorFields(){
+  try{
+    const saved=localStorage.getItem(SETTINGS_KEY);
+    if(saved)applySettings(JSON.parse(saved));
+  }catch(error){applySettings(DEFAULT_SETTINGS);setEditorStatus(`Saved text settings could not be loaded: ${error.message}`)}
+  fillEditor(settings);
+}
+applySettings(settings);
+setEditorStatus('Save to keep your changes in this browser on this device.');
+restoreEditorFields();
+readMedia().then(applyStoredMedia).catch(error=>setEditorStatus(`Saved uploads could not be loaded: ${error.message}`));
+editor.addEventListener('submit',async event=>{
+  event.preventDefault();
+  const next=readEditor(),eventDate=new Date(`${next.date}T${next.time}:00+05:30`),endDate=new Date(`${next.date}T${next.ceremonyEnd}:00+05:30`);
+  if(Number.isNaN(eventDate.getTime())||Number.isNaN(endDate.getTime())||endDate<=eventDate){setEditorStatus('Enter a valid wedding date and Muhurtham time range.');return}
+  const uploads=[
+    ['song',$('#edit-song').files[0],'audio'],
+    ['cover',$('#edit-cover').files[0],'image'],
+    ['photoOne',$('#edit-photo-one').files[0],'image'],
+    ['photoTwo',$('#edit-photo-two').files[0],'image']
+  ];
+  if(uploads.some(([,file,type])=>!validUpload(file,type)))return;
+  const changes={};uploads.forEach(([key,file])=>{if(file)changes[key]=file});
+  try{
+    localStorage.setItem(SETTINGS_KEY,JSON.stringify(next));
+    applySettings(next);tick();
+    if(Object.keys(changes).length){
+      try{await writeMedia(changes);applyStoredMedia(changes)}
+      catch(error){setEditorStatus(`Text changes were saved, but uploaded files could not be saved: ${error.message}`);return}
+    }
+    uploads.forEach(([,file],index)=>{if(file)editor.querySelectorAll('input[type=file]')[index].value=''});
+    setEditorStatus('Your changes are saved on this device.');
+  }catch(error){setEditorStatus(`Changes could not be saved: ${error.message}`)}
+});
+$('#clear-song').addEventListener('click',async()=>{
+  try{await writeMedia({song:null});applyMediaAsset('song',null);setEditorStatus('Using the built-in instrumental again.')}
+  catch(error){setEditorStatus(`The custom song could not be removed: ${error.message}`)}
+});
+$('#reset-custom').addEventListener('click',async()=>{
+  if(!confirm('Reset the text, music, and photos to the original invitation?'))return;
+  try{
+    localStorage.removeItem(SETTINGS_KEY);
+    localStorage.removeItem('sacred-garden-settings');
+    if(musicPlaying)stopMusic();
+    applySettings(DEFAULT_SETTINGS);tick();fillEditor(DEFAULT_SETTINGS);
+    editor.querySelectorAll('input[type=file]').forEach(input=>input.value='');
+    await writeMedia({song:null,cover:null,photoOne:null,photoTwo:null});
+    applyMediaAsset('song',null);
+    mediaKeys.filter(key=>key!=='song').forEach(key=>applyMediaAsset(key,null));
+    setEditorStatus('The invitation has been reset to its original content.');
+  }catch(error){setEditorStatus(`Text was reset, but saved uploads could not be cleared: ${error.message}`)}
+});
 
 watch();
 </script>
