@@ -155,24 +155,6 @@ img,video{display:block;max-width:100%}
 .gseal img{position:absolute;inset:0;width:100%;height:100%}
 .gseal span{position:relative}
 footer{padding:30px 20px 60px;text-align:center;font-family:var(--caps);font-size:10px;letter-spacing:.3em;color:var(--goldl);text-transform:uppercase}
-.customize{padding:0 22px 24px;text-align:center}
-.customize summary{display:inline-block;list-style:none;border:1px solid var(--goldl);border-radius:24px;padding:8px 18px;font-family:var(--caps);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);cursor:pointer}
-.customize summary::-webkit-details-marker{display:none}
-.customize[open] summary{background:rgba(201,174,114,.15)}
-.custom-note{font-size:14px;font-style:italic;color:var(--goldl);margin:10px 0 18px}
-.editor{max-width:390px;margin:0 auto;padding:24px 20px;text-align:left;background:#fffaf0;border:1px solid #d6bd89;border-radius:14px;box-shadow:0 12px 30px rgba(110,80,30,.1)}
-.editor h2{font-family:var(--caps);font-weight:500;font-size:15px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:18px 0 10px}
-.editor h2:first-child{margin-top:0}
-.editor label{display:block;font-family:var(--caps);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#987b4b;margin:10px 0 4px}
-.editor input,.editor textarea{display:block;width:100%;border:1px solid #e3d3b1;border-radius:6px;background:#fffdf8;padding:9px 10px;font:16px var(--serif);color:var(--ink)}
-.editor input[type=file]{font:12px var(--serif);padding:7px}
-.editor textarea{min-height:70px;resize:vertical}
-.editor .fields{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
-.editor .field{min-width:0}
-.editor .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.editor .pill{justify-content:center;letter-spacing:.1em}
-.editor .save{background:var(--wine);border-color:var(--wine);color:#fffaf0}
-.editor-status{min-height:24px;margin-top:12px;font-size:14px;color:var(--gold);text-align:center}
 .intro #intro-title,.intro #intro-message{white-space:pre-line}
 .family{padding:48px 22px 22px;text-align:center}
 .family-grid{display:grid;gap:14px;margin-top:24px}
@@ -194,6 +176,7 @@ footer{padding:30px 20px 60px;text-align:center;font-family:var(--caps);font-siz
   <div class="tap">Tap to open</div>
 </div></div>
 <button id="mus" aria-label="Pause music" title="Pause music"><svg viewBox="0 0 14 14"><path id="mi" d="M3 1h3v12H3zM8 1h3v12H8z"/></svg></button>
+<audio id="song" loop preload="auto" src="Audio/theri-songs-thaimai-official-video-song-vijay-samantha-amy-jackson-atlee-gv_l85crR16.mp3"></audio>
 
 <div class="wrap">
 
@@ -304,50 +287,6 @@ Malayalam date: 1202 Dhanu 8</div>
     <div class="gseal"><img data-a="image/wax-seal.webp" alt=""><span id="seal-initials">S A</span></div>
   </div>
 </section>
-<section class="customize">
-  <details>
-    <summary>Edit this invitation</summary>
-    <p class="custom-note">Changes and uploaded files are saved only in this browser on this device. Music limit: 20 MB; image limit: 12 MB.</p>
-    <form class="editor" id="editor">
-      <h2>Website</h2>
-      <label for="edit-site-title">Website title</label><input id="edit-site-title" name="siteTitle" required maxlength="80">
-      <h2>Couple &amp; wedding</h2>
-      <div class="fields">
-        <div class="field"><label for="edit-one">First name</label><input id="edit-one" name="one" required maxlength="40"></div>
-        <div class="field"><label for="edit-two">Second name</label><input id="edit-two" name="two" required maxlength="40"></div>
-        <div class="field"><label for="edit-date">Wedding date</label><input type="date" id="edit-date" name="date" required></div>
-        <div class="field"><label for="edit-time">Ceremony time</label><input type="time" id="edit-time" name="time" required></div>
-        <div class="field"><label for="edit-end-time">Muhurtham ends</label><input type="time" id="edit-end-time" name="ceremonyEnd" required></div>
-      </div>
-      <label for="edit-venue">Wedding venue</label><input id="edit-venue" name="venue" required maxlength="120">
-      <label for="edit-malayalam-date">Malayalam date</label><input id="edit-malayalam-date" name="malayalamDate" maxlength="80">
-      <h2>Reception</h2>
-      <label for="edit-reception-venue">Reception venue</label><input id="edit-reception-venue" name="receptionVenue" required maxlength="120">
-      <label for="edit-reception-time">Reception time</label><input id="edit-reception-time" name="receptionTime" required maxlength="80">
-      <h2>Family details</h2>
-      <label for="edit-groom-parents">Groom's family</label><input id="edit-groom-parents" name="groomParents" required maxlength="120">
-      <label for="edit-groom-address">Groom's address</label><textarea id="edit-groom-address" name="groomAddress" required maxlength="200"></textarea>
-      <label for="edit-groom-phone">Groom's phone</label><input id="edit-groom-phone" name="groomPhone" type="tel" required maxlength="30">
-      <label for="edit-bride-parents">Bride's family</label><input id="edit-bride-parents" name="brideParents" required maxlength="120">
-      <label for="edit-bride-address">Bride's address</label><textarea id="edit-bride-address" name="brideAddress" required maxlength="200"></textarea>
-      <h2>Welcome message</h2>
-      <label for="edit-title">Main heading</label><textarea id="edit-title" name="title" required maxlength="100"></textarea>
-      <label for="edit-subtitle">Short line</label><input id="edit-subtitle" name="subtitle" required maxlength="120">
-      <label for="edit-message">Invitation message</label><textarea id="edit-message" name="message" required maxlength="500"></textarea>
-      <h2>Music &amp; photos</h2>
-      <label for="edit-song">Custom background song</label><input type="file" id="edit-song" accept="audio/*">
-      <label for="edit-cover">Invitation cover image</label><input type="file" id="edit-cover" accept="image/*">
-      <label for="edit-photo-one">Gallery photo one</label><input type="file" id="edit-photo-one" accept="image/*">
-      <label for="edit-photo-two">Gallery photo two</label><input type="file" id="edit-photo-two" accept="image/*">
-      <div class="actions">
-        <button type="submit" class="pill save">Save changes</button>
-        <button type="button" class="pill" id="clear-song">Use built-in music</button>
-        <button type="button" class="pill" id="reset-custom">Reset all</button>
-      </div>
-      <p class="editor-status" id="editor-status" role="status" aria-live="polite"></p>
-    </form>
-  </details>
-</section>
 <footer id="footer-text">Abhijith &amp; Sayujya · 23 · 12 · 2026</footer>
 </div>
 
@@ -355,7 +294,6 @@ Malayalam date: 1202 Dhanu 8</div>
 /* ---------- CONFIG: set BASE to '' once you host image/ and video/ folders yourself ---------- */
 const BASE='https://mandapam-template.syncandstyle.com/';
 const DEFAULT_SETTINGS={siteTitle:'My Wedding',one:'Abhijith',two:'Sayujya',date:'2026-12-23',time:'10:30',ceremonyEnd:'11:00',malayalamDate:'1202 Dhanu 8',venue:'Vaikom Mahadeva Temple, Vaikom',receptionVenue:'Rajamakkal Parish Hall,Neendoor',receptionTime:'6:00 PM to 10:30 PM',groomParents:'S/o Mr. Ajayakumar & Mrs. Sreeja',groomAddress:'Kallinkalparambil Abhinivas, Neendoor (P.O), Kottayam',groomPhone:'+91 9562 276 071',brideParents:'D/o Mr. Shaji & Mrs. Saritha',brideAddress:'Puthanthara (H), Kulasekharamangalam (P.O), Vaikom, Kottayam',title:'With the blessings of our families',subtitle:'Abhijith & Sayujya',message:'To make this blessed occasion more joyful, we cordially invite you with your family.'};
-const SETTINGS_KEY='my-wedding-settings';
 let settings={...DEFAULT_SETTINGS};
 let WEDDING=new Date(`${settings.date}T${settings.time}:00+05:30`);
 const EVENTS=[
@@ -383,9 +321,8 @@ document.querySelectorAll('[data-a]').forEach(n=>{
 function loadImage(n,path){
   n.loading='lazy';n.decoding='async';n.src=BASE+path;
 }
-function setEditorStatus(message){const status=$('#editor-status');if(status)status.textContent=message}
-function applySettings(next){
-  settings={...DEFAULT_SETTINGS,...next};
+function applySettings(){
+  settings={...DEFAULT_SETTINGS};
   WEDDING=new Date(`${settings.date}T${settings.time}:00+05:30`);
   document.title=settings.siteTitle;
   $('#hero-eyebrow').textContent=settings.siteTitle;
@@ -431,44 +368,14 @@ function applySettings(next){
 /* ---------- welcome ---------- */
 const mus=$('#mus'),w=$('#welcome'),wv=w.querySelector('video');
 let opened=false;
-let audioContext=null,musicTimer=null,musicNodes=[],musicPlaying=false,customTrack=null,customTrackUrl='';
-const chords=[[261.63,329.63,392,493.88],[220,261.63,329.63,440],[174.61,220,261.63,392],[196,246.94,293.66,392]];
-function playChord(index){
-  if(!audioContext)return;
-  const now=audioContext.currentTime;
-  musicNodes.forEach(({osc,gain})=>{gain.gain.cancelScheduledValues(now);gain.gain.setTargetAtTime(0,now,.7);osc.stop(now+3)});
-  musicNodes=[];
-  chords[index%chords.length].forEach((frequency,i)=>{
-    const osc=audioContext.createOscillator(),gain=audioContext.createGain();
-    osc.type='sine';osc.frequency.value=frequency;
-    gain.gain.setValueAtTime(0,now);gain.gain.linearRampToValueAtTime(i===0?.012:.008,now+1.6);
-    osc.connect(gain);gain.connect(audioContext.destination);osc.start(now);
-    musicNodes.push({osc,gain});
-  });
-}
+const song=$('#song');
+let musicPlaying=false;
+song.volume=.6;
 function startMusic(){
-  if(customTrack){
-    customTrack.play().then(()=>{musicPlaying=true;updateMusicButton()}).catch(()=>setEditorStatus('The selected song could not be played. Try another audio file.'));
-    return;
-  }
-  const AudioContextClass=window.AudioContext||window.webkitAudioContext;
-  if(!AudioContextClass)return;
-  if(!audioContext)audioContext=new AudioContextClass();
-  audioContext.resume().catch(()=>setEditorStatus('Music could not start. Tap the music button to try again.'));
-  let chord=0;
-  playChord(chord++);
-  musicTimer=setInterval(()=>playChord(chord++),8000);
-  musicPlaying=true;updateMusicButton();
+  song.play().then(()=>{musicPlaying=true;updateMusicButton()}).catch(()=>{});
 }
 function stopMusic(){
-  if(musicTimer){clearInterval(musicTimer);musicTimer=null}
-  if(customTrack)customTrack.pause();
-  if(audioContext){
-    const now=audioContext.currentTime;
-    musicNodes.forEach(({osc,gain})=>{gain.gain.cancelScheduledValues(now);gain.gain.setTargetAtTime(0,now,.3);osc.stop(now+2)});
-    musicNodes=[];
-  }
-  musicPlaying=false;updateMusicButton();
+  song.pause();musicPlaying=false;updateMusicButton();
 }
 function updateMusicButton(){
   mus.classList.add('show');
@@ -564,134 +471,7 @@ gs.addEventListener('pointermove',e=>{if(gx===null)return;const dx=e.clientX-gx;
 gs.addEventListener('pointerup',e=>{if(gx===null)return;const dx=e.clientX-gx;gx=null;ph[gi].style.transition='';
   if(Math.abs(dx)>60){const o=ph[gi];o.style.transform=`translateX(${dx>0?130:-130}%) rotate(${dx/6}deg)`;o.style.opacity=0;gi=(gi+1)%ph.length;setTimeout(()=>{o.style.transition='none';pos();void o.offsetWidth;o.style.transition=''},600);pos()}else pos()});
 
-/* ---------- local invitation editor ---------- */
-const editor=$('#editor'),mediaKeys=['song','cover','photoOne','photoTwo'],mediaUrls={};
-let mediaDbPromise;
-function openMediaDb(){
-  if(!window.indexedDB)return Promise.reject(new Error('This browser does not support local media storage.'));
-  if(!mediaDbPromise)mediaDbPromise=new Promise((resolve,reject)=>{
-    const request=indexedDB.open('sacred-garden-customization',1);
-    request.onupgradeneeded=()=>request.result.createObjectStore('assets');
-    request.onsuccess=()=>resolve(request.result);
-    request.onerror=()=>reject(request.error||new Error('Could not open local media storage.'));
-  });
-  return mediaDbPromise;
-}
-function writeMedia(changes){
-  return openMediaDb().then(db=>new Promise((resolve,reject)=>{
-    const tx=db.transaction('assets','readwrite'),store=tx.objectStore('assets');
-    Object.entries(changes).forEach(([key,value])=>value?store.put(value,key):store.delete(key));
-    tx.oncomplete=resolve;
-    tx.onerror=()=>reject(tx.error||new Error('Could not save uploaded media.'));
-    tx.onabort=()=>reject(tx.error||new Error('Saving uploaded media was cancelled.'));
-  }));
-}
-function readMedia(){
-  return openMediaDb().then(db=>new Promise((resolve,reject)=>{
-    const tx=db.transaction('assets','readonly'),store=tx.objectStore('assets'),result={};
-    let remaining=mediaKeys.length;
-    mediaKeys.forEach(key=>{
-      const request=store.get(key);
-      request.onsuccess=()=>{result[key]=request.result;if(--remaining===0)resolve(result)};
-      request.onerror=()=>reject(request.error||new Error('Could not load saved media.'));
-    });
-    tx.onerror=()=>reject(tx.error||new Error('Could not load saved media.'));
-  }));
-}
-function applyMediaAsset(key,blob){
-  const targets={
-    photoOne:[ph[0].querySelector('img')],
-    photoTwo:[ph[1].querySelector('img')]
-  };
-  const fallback={cover:'image/welcome-bg.webp',photoOne:PHOTOS[0],photoTwo:PHOTOS[1]};
-  if(key==='song'){
-    const wasPlaying=musicPlaying;
-    if(wasPlaying)stopMusic();
-    if(customTrackUrl)URL.revokeObjectURL(customTrackUrl);
-    customTrackUrl='';customTrack=null;
-    if(blob){customTrackUrl=URL.createObjectURL(blob);customTrack=new Audio(customTrackUrl);customTrack.loop=true;customTrack.preload='none';customTrack.volume=.6}
-    if(wasPlaying)startMusic();
-    return;
-  }
-  if(mediaUrls[key])URL.revokeObjectURL(mediaUrls[key]);
-  if(key==='cover'){
-    const cover=blob?(mediaUrls[key]=URL.createObjectURL(blob)):BASE+fallback.cover;
-    $('#welcome img').src=cover;
-    $('.hero .paper').src=blob?cover:BASE+'image/paper.webp';
-    return;
-  }
-  const source=blob?(mediaUrls[key]=URL.createObjectURL(blob)):BASE+fallback[key];
-  targets[key].forEach(image=>image.src=source);
-}
-function fillEditor(next){
-  Object.keys(next).forEach(key=>{if(editor.elements[key])editor.elements[key].value=next[key]});
-}
-function readEditor(){
-  const values=new FormData(editor),next={};
-  ['siteTitle','one','two','date','time','ceremonyEnd','malayalamDate','venue','receptionVenue','receptionTime','groomParents','groomAddress','groomPhone','brideParents','brideAddress','title','subtitle','message'].forEach(key=>next[key]=String(values.get(key)||'').trim());
-  return next;
-}
-function validUpload(file,type){
-  if(!file)return true;
-  const extension=type==='audio'?/\.(mp3|wav|ogg|m4a|aac|flac)$/i:/\.(png|jpe?g|gif|webp|avif|svg)$/i;
-  if(!(file.type.startsWith(type+'/')||extension.test(file.name))){setEditorStatus(`Choose a valid ${type} file.`);return false}
-  const maxSize=type==='audio'?20:12;
-  if(file.size>maxSize*1024*1024){setEditorStatus(`Keep ${type} files under ${maxSize} MB.`);return false}
-  return true;
-}
-function applyStoredMedia(assets){mediaKeys.forEach(key=>{if(assets[key])applyMediaAsset(key,assets[key])})}
-function restoreEditorFields(){
-  try{
-    const saved=localStorage.getItem(SETTINGS_KEY);
-    if(saved)applySettings(JSON.parse(saved));
-  }catch(error){applySettings(DEFAULT_SETTINGS);setEditorStatus(`Saved text settings could not be loaded: ${error.message}`)}
-  fillEditor(settings);
-}
-applySettings(settings);
-setEditorStatus('Save to keep your changes in this browser on this device.');
-restoreEditorFields();
-readMedia().then(applyStoredMedia).catch(error=>setEditorStatus(`Saved uploads could not be loaded: ${error.message}`));
-editor.addEventListener('submit',async event=>{
-  event.preventDefault();
-  const next=readEditor(),eventDate=new Date(`${next.date}T${next.time}:00+05:30`),endDate=new Date(`${next.date}T${next.ceremonyEnd}:00+05:30`);
-  if(Number.isNaN(eventDate.getTime())||Number.isNaN(endDate.getTime())||endDate<=eventDate){setEditorStatus('Enter a valid wedding date and Muhurtham time range.');return}
-  const uploads=[
-    ['song',$('#edit-song').files[0],'audio'],
-    ['cover',$('#edit-cover').files[0],'image'],
-    ['photoOne',$('#edit-photo-one').files[0],'image'],
-    ['photoTwo',$('#edit-photo-two').files[0],'image']
-  ];
-  if(uploads.some(([,file,type])=>!validUpload(file,type)))return;
-  const changes={};uploads.forEach(([key,file])=>{if(file)changes[key]=file});
-  try{
-    localStorage.setItem(SETTINGS_KEY,JSON.stringify(next));
-    applySettings(next);tick();
-    if(Object.keys(changes).length){
-      try{await writeMedia(changes);applyStoredMedia(changes)}
-      catch(error){setEditorStatus(`Text changes were saved, but uploaded files could not be saved: ${error.message}`);return}
-    }
-    uploads.forEach(([,file],index)=>{if(file)editor.querySelectorAll('input[type=file]')[index].value=''});
-    setEditorStatus('Your changes are saved on this device.');
-  }catch(error){setEditorStatus(`Changes could not be saved: ${error.message}`)}
-});
-$('#clear-song').addEventListener('click',async()=>{
-  try{await writeMedia({song:null});applyMediaAsset('song',null);setEditorStatus('Using the built-in instrumental again.')}
-  catch(error){setEditorStatus(`The custom song could not be removed: ${error.message}`)}
-});
-$('#reset-custom').addEventListener('click',async()=>{
-  if(!confirm('Reset the text, music, and photos to the original invitation?'))return;
-  try{
-    localStorage.removeItem(SETTINGS_KEY);
-    localStorage.removeItem('sacred-garden-settings');
-    if(musicPlaying)stopMusic();
-    applySettings(DEFAULT_SETTINGS);tick();fillEditor(DEFAULT_SETTINGS);
-    editor.querySelectorAll('input[type=file]').forEach(input=>input.value='');
-    await writeMedia({song:null,cover:null,photoOne:null,photoTwo:null});
-    applyMediaAsset('song',null);
-    mediaKeys.filter(key=>key!=='song').forEach(key=>applyMediaAsset(key,null));
-    setEditorStatus('The invitation has been reset to its original content.');
-  }catch(error){setEditorStatus(`Text was reset, but saved uploads could not be cleared: ${error.message}`)}
-});
+applySettings();
 
 watch();
 </script>
