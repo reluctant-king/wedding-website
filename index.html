@@ -147,13 +147,20 @@ img,video{display:block;max-width:100%}
 .gal{padding:60px 0 80px;text-align:center}
 .gal .h2{font-family:var(--serif);font-weight:500;font-size:34px;text-transform:none;letter-spacing:.02em;color:#7b5a2e;margin:8px 0}
 .gal .sub{font-size:16px;color:var(--goldl)}
-.gs{position:relative;margin:50px 28px 0;aspect-ratio:3/4;touch-action:pan-y;cursor:grab}
-.ph{position:absolute;inset:0;background:#fff;padding:8px 8px 22px;box-shadow:0 14px 30px rgba(0,0,0,.18);transition:transform .6s cubic-bezier(.3,.7,.2,1),opacity .6s;will-change:transform}
-.ph img{width:100%;height:100%;object-fit:cover;pointer-events:none}
-.ph:after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:#F2EEE6;clip-path:polygon(0 60%,6% 20%,12% 70%,20% 30%,30% 80%,40% 25%,50% 70%,60% 30%,72% 80%,82% 25%,92% 70%,100% 40%,100% 100%,0 100%)}
-.gseal{position:absolute;top:-34px;left:50%;transform:translateX(-50%);z-index:5;width:68px;height:68px;display:flex;align-items:center;justify-content:center;color:#e8b8c0;font-size:20px;pointer-events:none}
+.gseal{position:relative;width:68px;height:68px;margin:18px auto 0;display:flex;align-items:center;justify-content:center;color:#e8b8c0;font-size:20px;pointer-events:none}
 .gseal img{position:absolute;inset:0;width:100%;height:100%}
 .gseal span{position:relative}
+.gal-stage{position:relative;margin-top:8px}
+.deck{position:absolute;inset:24px 28px 18px;pointer-events:none}
+.ph{position:relative;background:#fff;padding:8px 8px 22px;box-shadow:0 14px 30px rgba(0,0,0,.18)}
+.ph:after{content:"";position:absolute;left:0;right:0;bottom:0;height:14px;background:#F2EEE6;clip-path:polygon(0 60%,6% 20%,12% 70%,20% 30%,30% 80%,40% 25%,50% 70%,60% 30%,72% 80%,82% 25%,92% 70%,100% 40%,100% 100%,0 100%)}
+.deck .ph{position:absolute;left:50%;top:0;width:min(78%,320px);aspect-ratio:3/4;transform:translateX(-50%) translateY(10px) rotate(-3deg) scale(.97)}
+.deck .ph:nth-child(2){transform:translateX(-50%) translateY(20px) rotate(3deg) scale(.94)}
+.gs{position:relative;z-index:1;display:flex;gap:18px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;justify-content:center;justify-content:safe center;padding:24px 28px 18px;cursor:grab}
+.gs.drag{scroll-snap-type:none;cursor:grabbing}
+.gs::-webkit-scrollbar{display:none}
+.gs .ph{flex:0 0 min(78%,320px);aspect-ratio:3/4;scroll-snap-align:center}
+.gs .ph img{width:100%;height:100%;object-fit:cover;pointer-events:none}
 footer{padding:30px 20px 60px;text-align:center;font-family:var(--caps);font-size:10px;letter-spacing:.3em;color:var(--goldl);text-transform:uppercase}
 .intro #intro-title,.intro #intro-message{white-space:pre-line}
 .family{padding:48px 22px 22px;text-align:center}
@@ -282,9 +289,11 @@ Malayalam date: 1202 Dhanu 8</div>
 <section class="gal">
   <div class="eyebrow rv">Our story</div>
   <h2 class="h2 rv">Moments to treasure</h2>
-  <p class="sub rv">Swipe left or right to turn the photo</p>
-  <div class="gs" id="gs">
-    <div class="gseal"><img data-a="image/wax-seal.webp" alt=""><span id="seal-initials">S A</span></div>
+  <p class="sub rv">Swipe to browse our photos</p>
+  <div class="gseal rv"><img data-a="image/wax-seal.webp" alt=""><span id="seal-initials">S A</span></div>
+  <div class="gal-stage">
+    <div class="deck" aria-hidden="true"><i class="ph"></i><i class="ph"></i></div>
+    <div class="gs" id="gs" tabindex="0" aria-label="Photo gallery"></div>
   </div>
 </section>
 <footer id="footer-text">Abhijith &amp; Sayujya · 23 · 12 · 2026</footer>
@@ -299,7 +308,7 @@ let WEDDING=new Date(`${settings.date}T${settings.time}:00+05:30`);
 const EVENTS=[
  ['Wedding Ceremony','wedding','Wednesday, 23 December 2026','Muhurtham: 10:30 AM to 11:00 AM','Vaikom Mahadeva Temple','Vaikom','Vaikom Mahadeva Temple, Vaikom'],
  ['Wedding Reception','reception','Wednesday, 23 December 2026','6:00 PM to 10:30 PM','Rajamakkal Parish Hall,Neendoor','','Rajamakkal Parish Hall,Neendoor']];
-const PHOTOS=['image/2.webp','image/1.webp'];
+const PHOTOS=['Images/abhi%20and%20sayu.jpg'];
 
 const $=s=>document.querySelector(s),el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h)e.innerHTML=h;return e};
 const lazyVideos=new IntersectionObserver(es=>es.forEach(e=>{
@@ -462,14 +471,18 @@ $('#send').onclick=()=>{
   $('#rsvp').classList.add('sent');
 };
 
-/* ---------- gallery (swipe to turn) ---------- */
-const gs=$('#gs'),ph=PHOTOS.map((p,i)=>{const d=el('div','ph'),img=el('img');img.alt='';loadImage(img,p);d.appendChild(img);gs.insertBefore(d,gs.querySelector('.gseal'));return d});
-let gi=0,gx=null;const pos=()=>ph.forEach((d,i)=>{const o=(i-gi+ph.length)%ph.length;d.style.zIndex=ph.length-o;d.style.transform=o?`translateY(${o*10}px) rotate(${o%2?3:-3}deg) scale(${1-o*.03})`:'none';d.style.opacity=o>2?0:1});
-pos();
-gs.addEventListener('pointerdown',e=>{gx=e.clientX;gs.setPointerCapture(e.pointerId)});
-gs.addEventListener('pointermove',e=>{if(gx===null)return;const dx=e.clientX-gx;ph[gi].style.transition='none';ph[gi].style.transform=`translateX(${dx}px) rotate(${dx/18}deg)`});
-gs.addEventListener('pointerup',e=>{if(gx===null)return;const dx=e.clientX-gx;gx=null;ph[gi].style.transition='';
-  if(Math.abs(dx)>60){const o=ph[gi];o.style.transform=`translateX(${dx>0?130:-130}%) rotate(${dx/6}deg)`;o.style.opacity=0;gi=(gi+1)%ph.length;setTimeout(()=>{o.style.transition='none';pos();void o.offsetWidth;o.style.transition=''},600);pos()}else pos()});
+/* ---------- gallery (horizontal scroll) ---------- */
+const gs=$('#gs');
+PHOTOS.forEach(p=>{
+  const d=el('div','ph'),img=el('img');
+  img.alt='';img.loading='lazy';img.decoding='async';img.src=p;
+  d.appendChild(img);gs.appendChild(d);
+});
+let dsx=null,dsl=0;
+gs.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'&&e.button!==0)return;dsx=e.clientX;dsl=gs.scrollLeft;gs.classList.add('drag');gs.setPointerCapture(e.pointerId)});
+gs.addEventListener('pointermove',e=>{if(dsx!==null)gs.scrollLeft=dsl-(e.clientX-dsx)});
+gs.addEventListener('pointerup',()=>{dsx=null;gs.classList.remove('drag')});
+gs.addEventListener('pointercancel',()=>{dsx=null;gs.classList.remove('drag')});
 
 applySettings();
 
